@@ -14,10 +14,9 @@ app.use(require('./app/routes/note.routes.js'))
 
 app.use( ( req, res ) => {
     res.sendFile(path.join(__dirname, 'public/index.html'))
-    })
+})
 
 
-app.listen(port, () => {
-    console.log("probably listening on port " + port);
-});
+app.listen(process.env.PORT || 3000, 
+	() => console.log("Server is running..."));
 
