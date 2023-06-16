@@ -7,13 +7,13 @@ app.use(express.static(path.join(__dirname, 'public')))
 
 
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public/notes.html'))
+    res.sendFile(path.join(__dirname, 'src/notes.html'))
 })
 
 app.use(require(path.join(__dirname, 'routes/note.routes.js')))
 
 app.use( ( req, res ) => {
-    res.sendFile(path.join(__dirname, 'public/index.html'))
+    res.sendFile(path.join(__dirname, 'src/index.html'))
 })
 
 
