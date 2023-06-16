@@ -10,7 +10,7 @@ app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, 'public/notes.html'))
 })
 
-app.use(require(path.join(__dirname, 'app/routes/note.routes.js')))
+app.use(require(path.join(__dirname, 'routes/note.routes.js')))
 
 app.use( ( req, res ) => {
     res.sendFile(path.join(__dirname, 'public/index.html'))
