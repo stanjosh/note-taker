@@ -5,7 +5,7 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, 'public')))
 
-app.use(require('routes/note.routes.js'))
+app.use(require(path.join(__dirname, 'routes/note.routes.js')))
 
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname,'src/notes.html'))

@@ -2,8 +2,10 @@ const uniqid = require('uniqid');
 const express = require("express");
 const noteRoutes = express.Router();
 const fs = require("fs");
+const path = require('path');
 var bodyParser = require('body-parser')
-const dataPath = "./app/database/db.json";
+const dataPath = path.join(__dirname, "../database/db.json");
+
 
 var jsonParser = bodyParser.json()
 
